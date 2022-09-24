@@ -3,7 +3,7 @@
 The code is based on the repository "Telle" as well as the "Sunflower" app and Android's best practises: https://github.com/android/sunflower/.
 
 ## Screenshots
-<img src="today.png" alt="drawing" width="200"/> <img src="history.png" alt="drawing" width="200"/>
+<img src="today.jpeg" alt="drawing" width="200"/> <img src="history.jpeg" alt="drawing" width="200"/>
 
 Left: A progress bar, estimating days to next period. Right: A list of the periods in the database
 
