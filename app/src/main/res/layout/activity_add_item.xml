@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="myViewmodel"
+            type="com.example.gender_inclusiveperiodtracker.AddEpisodeViewModel" />
+    </data>
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="32dp"
+    android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/title_sickday"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+        <CheckBox
+            android:id="@+id/sickDayCheckBox"
+            android:checked="@={myViewmodel.sickDay}"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:onClick="onCheckboxClicked"/>
+        <!--
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/title_dates"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        tools:context=".AddEpisodeActivity">
+
+        <EditText
+            android:id="@+id/editStartDate"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:hint="@string/hint_start_date"
+            android:text="@{myViewmodel.myText}"
+            android:importantForAutofill="no"
+            android:inputType="date"
+            android:onClick="showStartDatePickerDialog"
+            app:layout_constraintEnd_toStartOf="@+id/editEndDate"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/editEndDate"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:hint="@string/hint_end_date"
+            android:importantForAutofill="no"
+            android:inputType="date"
+            android:onClick="showEndDatePickerDialog"
+            app:layout_constraintBaseline_toBaselineOf="@+id/editStartDate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/editStartDate" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/title_mood"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chip_group_mood"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:singleSelection="false">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipHappy"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:text="@string/happy"
+            app:chipIcon="@drawable/chip_sentiment_satisfied_white_24dp"
+            app:chipIconEnabled="true" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipSoSo"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:text="@string/so_so"
+            app:chipIcon="@drawable/chip_sentiment_neutral_white_24dp"
+            app:chipIconEnabled="true" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipSad"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:text="@string/sad"
+            app:chipIcon="@drawable/chip_sentiment_dissatisfied_white_24dp"
+            app:chipIconEnabled="true" />
+    </com.google.android.material.chip.ChipGroup>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="
+        @string/title_flow"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chip_group_flow"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:singleSelection="true">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipLight"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:text="@string/light"
+            app:chipIconEnabled="true" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipMedium"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:text="@string/medium"
+            app:chipIconEnabled="true" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipHeavy"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:text="@string/heavy"
+            app:chipIconEnabled="true" />
+
+    </com.google.android.material.chip.ChipGroup>
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/title_notes"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+    <EditText
+        android:id="@+id/editNotes"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="top|left"
+        android:hint="@string/hint_notes"
+        android:importantForAutofill="no"
+        android:inputType="text" />
+    -->
+
+    </LinearLayout>
+</layout>

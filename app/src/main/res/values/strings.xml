@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Gender-inclusive Period Tracker</string>
+
+    <!-- Strings used for fragments for navigation -->
+
+    <!-- <string name="today_fragment_label">Today Fragment</string>
+    <string name="history_fragment_label">History Fragment</string>
+    <string name="profile_fragment_label">Profile Fragment</string> -->
+
+    <string name="title_profile">Profile</string>
+    <string name="title_history">History</string>
+    <string name="title_today">Today</string>
+    <string name="title_dates">Dates</string>
+    <string name="hint_start_date">Start date</string>
+    <string name="hint_end_date">End date</string>
+    <string name="title_mood">Mood</string>
+    <string name="happy">Happy</string>
+    <string name="so_so">So-so</string>
+    <string name="sad">Sad</string>
+    <string name="light">Light</string>
+    <string name="medium">Medium</string>
+    <string name="heavy">Heavy</string>
+    <string name="sickYes">Yes</string>
+    <string name="title_notes">Notes</string>
+    <string name="title_flow">Flow</string>
+    <string name="title_sickday">Sick day</string>
+    <string name="hint_notes">Type additional notes, if you have any..</string>
+    <string name="action_recompute_cycles">Recompute all cycles</string>
+    <string name="action_save">Save</string>
+    <string name="action_delete">Delete</string>
+    <string name="cycle">Cycle</string>
+    <string name="duration">Duration</string>
+    <string name="hint_time_interval">Time interval</string>
+    <string name="current_cycle">Current cycle</string>
+
+
+
+</resources>
