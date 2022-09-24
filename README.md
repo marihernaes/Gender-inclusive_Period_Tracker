@@ -3,8 +3,9 @@
 The code is based on the repository "Telle" as well as the "Sunflower" app and Android's best practises: https://github.com/android/sunflower/.
 
 ## Screenshots
-![Today Fragment](today.png "A progress bar, estimating days to next period")
-![History Fragment](history.png "A list of the periods in the database")
+<img src="today.png" alt="drawing" width="200"/> <img src="history.png" alt="drawing" width="200"/>
+
+Left: A progress bar, estimating days to next period. Right: A list of the periods in the database
 
 ## Libraries
 - [Room][0] - For accessing the SQLite database
